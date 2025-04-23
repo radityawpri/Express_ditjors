@@ -1,9 +1,20 @@
 const sayHello = async (request, response) => {
   try {
-    // logic
-    // response.status(200).json({
-    //   message: "Hello World",
-    // });
+    const angka = 1;
+    const angka2 = 2;
+    const hasil = angka + angka2;
+
+
+
+
+    response.status(200).json({
+      message: "Hello World",
+      data: {
+        angka,
+        angka2,
+        hasil,
+      },
+    });
     throw new Error("seep");
   } catch (error) {
     response.status(500).json({
